@@ -20,20 +20,26 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        // Application identifier for the Codekay app
         applicationId = "com.gdg.daily_coding_app"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://flutter.dev/to/review-gradle-config.
+
+        // Minimum SDK version required to run the application
         minSdk = flutter.minSdkVersion
+
+        // Target SDK version optimized for latest Android features
         targetSdk = flutter.targetSdkVersion
+
+        // Version code for Play Store versioning
         versionCode = flutter.versionCode
+
+        // Human-readable version name
         versionName = flutter.versionName
     }
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
+            // Release build configuration
+            // For production deployment, configure proper signing credentials
             signingConfig = signingConfigs.debug
         }
     }
