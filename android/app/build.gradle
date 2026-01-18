@@ -1,0 +1,63 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.gdg.daily_coding_app"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        // Application identifier for the Codekay app
+        applicationId = "com.gdg.daily_coding_app"
+
+        // Minimum SDK version required to run the application
+        minSdk = flutter.minSdkVersion
+
+        // Target SDK version optimized for latest Android features
+        targetSdk = flutter.targetSdkVersion
+
+        // Version code for Play Store versioning
+        versionCode = flutter.versionCode
+
+        // Human-readable version name
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            // Release build configuration
+            // For production deployment, configure proper signing credentials
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    // Import the Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+    
+    // Add the dependencies for Firebase products you want to use
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore")
+}
+
+// Add this at the bottom
+apply plugin: 'com.google.gms.google-services'
