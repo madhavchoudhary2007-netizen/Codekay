@@ -1,5 +1,5 @@
 name: daily_coding_app
-description: A daily coding question app
+description: A cross-platform daily coding challenge application that helps developers improve their problem-solving skills through daily coding questions with Firebase authentication and real-time updates.
 publish_to: 'none'
 version: 1.0.0+1
 
