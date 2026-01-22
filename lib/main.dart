@@ -1,11 +1,4 @@
 /// Codekay - Daily Coding Challenge Application
-///
-/// A cross-platform Flutter application that delivers daily coding challenges
-/// to help developers improve their problem-solving skills. Features include
-/// user authentication, question management via Firebase, and a clean,
-/// intuitive interface for submitting solutions.
-///
-/// Built with Flutter for iOS, Android, Web, Windows, macOS, and Linux.
 library;
 
 import 'package:flutter/material.dart';
